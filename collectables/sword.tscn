@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://qxdgk3gqbmbf"]
+
+[ext_resource type="PackedScene" uid="uid://uolrj6icb8h3" path="res://collectables/collectable.tscn" id="1_3r8i2"]
+[ext_resource type="Texture2D" uid="uid://c3h8fimejbe3o" path="res://art/Sword.png" id="2_i4dr7"]
+[ext_resource type="Script" path="res://collectables/sword.gd" id="2_jwuve"]
+[ext_resource type="Resource" uid="uid://docnx6sjepkc6" path="res://inventory/items/sword.tres" id="3_ys12m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygdh6"]
+resource_local_to_scene = true
+size = Vector2(6, 14)
+
+[sub_resource type="Animation" id="Animation_hcmaa"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_j8g8c"]
+resource_name = "spin"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 3.04909, 4.43314, 5.4559, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w2noy"]
+_data = {
+"RESET": SubResource("Animation_hcmaa"),
+"spin": SubResource("Animation_j8g8c")
+}
+
+[node name="Sword" instance=ExtResource("1_3r8i2")]
+script = ExtResource("2_jwuve")
+itemRes = ExtResource("3_ys12m")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_ygdh6")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("2_i4dr7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+libraries = {
+"": SubResource("AnimationLibrary_w2noy")
+}

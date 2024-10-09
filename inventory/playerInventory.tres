@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=19 format=3 uid="uid://dctg3x561cnxf"]
+
+[ext_resource type="Script" path="res://inventory/inventorySlot.gd" id="2_3hm18"]
+[ext_resource type="Resource" uid="uid://du26rivpbwa7e" path="res://inventory/items/lifepot.tres" id="2_ntsut"]
+[ext_resource type="Script" path="res://inventory/inventory.gd" id="3_q8q4s"]
+
+[sub_resource type="Resource" id="Resource_wjtpo"]
+script = ExtResource("2_3hm18")
+item = ExtResource("2_ntsut")
+amount = 4
+
+[sub_resource type="Resource" id="Resource_1sfml"]
+script = ExtResource("2_3hm18")
+item = ExtResource("2_ntsut")
+amount = 4
+
+[sub_resource type="Resource" id="Resource_tltgw"]
+script = ExtResource("2_3hm18")
+item = ExtResource("2_ntsut")
+amount = 2
+
+[sub_resource type="Resource" id="Resource_46g0b"]
+script = ExtResource("2_3hm18")
+item = ExtResource("2_ntsut")
+amount = 5
+
+[sub_resource type="Resource" id="Resource_v81qj"]
+script = ExtResource("2_3hm18")
+item = ExtResource("2_ntsut")
+amount = 8
+
+[sub_resource type="Resource" id="Resource_caucl"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_1cxdg"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_b101y"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_hrcmm"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_ph1j5"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_mfwbb"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_57pv3"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_b2dfx"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_0ojam"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[sub_resource type="Resource" id="Resource_2kb2j"]
+script = ExtResource("2_3hm18")
+amount = 0
+
+[resource]
+script = ExtResource("3_q8q4s")
+slots = Array[ExtResource("2_3hm18")]([SubResource("Resource_wjtpo"), SubResource("Resource_1sfml"), SubResource("Resource_tltgw"), SubResource("Resource_46g0b"), SubResource("Resource_v81qj"), SubResource("Resource_caucl"), SubResource("Resource_1cxdg"), SubResource("Resource_b101y"), SubResource("Resource_hrcmm"), SubResource("Resource_ph1j5"), SubResource("Resource_mfwbb"), SubResource("Resource_57pv3"), SubResource("Resource_b2dfx"), SubResource("Resource_0ojam"), SubResource("Resource_2kb2j")])
